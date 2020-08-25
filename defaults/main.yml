@@ -1,0 +1,8 @@
+---
+etcd_version: "v3.4.13"
+etcd_download_url: "https://storage.googleapis.com/etcd/{{ etcd_version }}/etcd-{{ etcd_version }}-linux-amd64.tar.gz"
+etcd_install_tmp_base_dir: /tmp
+
+etcd_user: etcd
+etcd_group: etcd
+etcd_data_path: /var/lib/etcd

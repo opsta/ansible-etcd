@@ -1,0 +1,7 @@
+---
+- name: Download & Install etcd
+  unarchive:
+    src: "{{ etcd_download_url }}"
+    dest: "/usr/bin/"
+    extra_opts: [ --strip-components=1 ]
+    remote_src: yes

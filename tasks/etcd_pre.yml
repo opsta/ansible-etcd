@@ -1,0 +1,19 @@
+---
+- name: Add etcd group
+  group:
+    name: "{{ etcd_group }}"
+
+- name: Add etcd user
+  user:
+    name: "{{ etcd_user }}"
+    group: "{{ etcd_group }}"
+    shell: /bin/bash
+    create_home: no
+
+- name: Create etcd data directory
+  file:
+    path: "{{ etcd_data_path }}"
+    state: directory
+    mode: 0755
+    owner: "{{ etcd_user }}"
+    group: "{{ etcd_group }}"

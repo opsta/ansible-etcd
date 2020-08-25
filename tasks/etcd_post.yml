@@ -1,0 +1,14 @@
+---
+- name: Create etcd Systemd Unit file
+  template:
+    src: etcd.service.j2
+    dest: /lib/systemd/system/etcd.service
+    mode: 0644
+  register: etcd_systemd
+
+- name: Ensure etcd started and enabled
+  systemd:
+    name: etcd
+    state: started
+    enabled: yes
+    daemon_reload: yes

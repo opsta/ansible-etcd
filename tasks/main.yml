@@ -1,0 +1,8 @@
+---
+- include_tasks: etcd_pre.yml
+- include_tasks: etcd_install.yml
+
+- block: # Config etcd
+  - include_tasks: etcd_post.yml
+  tags:
+    - etcd-config
