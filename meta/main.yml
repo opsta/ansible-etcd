@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: etcd
   author: Opsta
   description: Ansible role to install and config etcd (single node)
   company: "Opsta (Thailand) Co.,Ltd."
